@@ -58,7 +58,8 @@ Requires:
 - usb-moded-diag-mode-android
 
 # from update13, this is needed explicitly
-- bluez-configs-sailfish
+#- bluez-configs-sailfish
+- droid-config-gemini-bluez4
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 - rfkill
 
