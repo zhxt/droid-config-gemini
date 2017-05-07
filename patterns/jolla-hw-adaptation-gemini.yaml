@@ -4,10 +4,6 @@
 Description: Pattern with packages for gemini HW Adaptation
 Name: jolla-hw-adaptation-gemini
 Requires:
-- pattern:jolla-hw-adaptation-hybris
-- pattern:jolla-hw-adaptation-hybris-droid-vibrator
-- pattern:jolla-ui-configuration-gemini
-
 - droid-hal-gemini
 - droid-hal-gemini-img-boot
 - droid-hal-gemini-kernel-modules
@@ -17,6 +13,17 @@ Requires:
 - droid-config-gemini-preinit-plugin
 - droid-config-gemini-flashing
 - droid-hal-version-gemini
+
+# Hybris packages
+- libhybris-libEGL
+- libhybris-libGLESv2
+- libhybris-libwayland-egl
+
+# Sensors
+- hybris-libsensorfw-qt5
+
+# Needed for /dev/touchscreen symlink
+- qt5-plugin-generic-evdev
 
 - pulseaudio-modules-droid
 - pulseaudio-modules-droid-glue
