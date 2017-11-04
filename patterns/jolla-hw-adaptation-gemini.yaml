@@ -40,6 +40,7 @@ Requires:
 - qt5-qtwayland-wayland_egl
 - qt5-qpa-hwcomposer-plugin
 - qtscenegraph-adaptation
+- qt5-qpa-surfaceflinger-plugin
 
 # Add GStreamer v1.0 as standard
 - gstreamer1.0
@@ -79,6 +80,12 @@ Requires:
 # For FM radio on some QCOM devices
 #- qt5-qtmultimedia-plugin-mediaservice-irisradio
 #- jolla-mediaplayer-radio
+
+#For Debug
+- gdb
+- strace
+- qt5-qtdeclarative-qmlscene
+- gstreamer1.0-droid-tools
 
 Summary: Jolla HW Adaptation gemini
 
