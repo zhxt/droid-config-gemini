@@ -12,6 +12,7 @@ Requires:
 - droid-config-gemini-policy-settings
 - droid-config-gemini-preinit-plugin
 - droid-config-gemini-flashing
+- droid-config-gemini-bluez4
 - droid-hal-version-gemini
 
 # Hybris packages
@@ -22,11 +23,14 @@ Requires:
 # Sensors
 - hybris-libsensorfw-qt5
 
+# Vibra
+- ngfd-plugin-droid-vibrator
+- qt5-feedback-haptics-droid-vibrator
+
 # Needed for /dev/touchscreen symlink
 - qt5-plugin-generic-evdev
 
 - pulseaudio-modules-droid
-- pulseaudio-modules-droid-glue
 # for audio recording to work:
 - qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
 
@@ -35,19 +39,14 @@ Requires:
 - qt5-qpa-hwcomposer-plugin
 - qtscenegraph-adaptation
 
-# GStreamer v0.10 multimedia support is being deprecated
-#- gstreamer0.10-droidcamsrc
-#- gstreamer0.10-omx
-#- gstreamer0.10-droideglsink
-#- nemo-qtmultimedia-plugins-gstvideotexturebackend
-
 # Add GStreamer v1.0 as standard
 - gstreamer1.0
 - gstreamer1.0-plugins-good
 - gstreamer1.0-plugins-base
 - gstreamer1.0-plugins-bad
 - nemo-gstreamer1.0-interfaces
-- gstreamer1.0-droid
+# For devices with droidmedia and gst-droid built, see HADK pdf for more information
+#- gstreamer1.0-droid
 
 # This is needed for notification LEDs
 - mce-plugin-libhybris
@@ -60,30 +59,24 @@ Requires:
 
 # Extra useful modes not officially supported:
 # might need some configuration to get working
-- usb-moded-mass-storage-android-config
+#- usb-moded-mass-storage-android-config
 # working but careful with roaming!
 - usb-moded-connection-sharing-android-config
 # android diag mode only usable for certain android tools
-- usb-moded-diag-mode-android
+#- usb-moded-diag-mode-android
 
-# from update13, this is needed explicitly
-#- bluez-configs-sailfish
-- droid-config-gemini-bluez4
 # hammerhead, grouper, and maguro use this in scripts, so include for all
 - rfkill
 
 # enable device lock and allow to select untrusted software
 - jolla-devicelock-plugin-encsfa
 
-# Settings app needs this since update15
-- jolla-settings-layout
-
-# For devices with working cellular modem:
-- pattern:jolla-sailfish-cellular-apps
-- telepathy-ring
-
-# For devices where test_gps eventually gets a fix:
+# For GPS
 - geoclue-provider-hybris
+
+# For FM radio on some QCOM devices
+#- qt5-qtmultimedia-plugin-mediaservice-irisradio
+#- jolla-mediaplayer-radio
 
 Summary: Jolla HW Adaptation gemini
 
