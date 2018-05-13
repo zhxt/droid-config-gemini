@@ -13,6 +13,10 @@ Requires:
 - droid-config-gemini-preinit-plugin
 - droid-config-gemini-flashing
 - droid-config-gemini-bluez5
+- bluez5-tools
+# Built with: rpm/dhd/helpers/build_packages.sh --mw=https://github.com/mer-hybris/bluetooth-rfkill-event --spec=rpm/bluetooth-rfkill-event-hciattach.spec
+- bluetooth-rfkill-event-hciattach
+- bluetooth-rfkill-event-hciattach-configs-mer
 - droid-hal-version-gemini
 
 # Hybris packages
