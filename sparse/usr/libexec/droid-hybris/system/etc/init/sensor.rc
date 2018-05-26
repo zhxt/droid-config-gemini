@@ -1,0 +1,5 @@
+service sensorservice /system/bin/sensorservice 
+    class late_start
+    user root
+    group root
+
